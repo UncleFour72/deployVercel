@@ -9,6 +9,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <div>
+          <h1>Project 1 – React Frontend</h1>
+          <p>Frontend đã deploy thành công trên Vercel!</p>
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
