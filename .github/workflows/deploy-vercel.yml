@@ -1,9 +1,10 @@
+
 name: Deploy to Vercel
 
 on:
   push:
-    branches:
-      - master   # đổi thành main nếu repo bạn là main
+    branches:   # hoặc master nếu branch của bạn là master
+      - master
 
 jobs:
   deploy:
@@ -12,15 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Debug secrets
-        run: |
-          if [ -z "${{ secrets.VERCEL_TOKEN }}" ]; then
-            echo "❌ VERCEL_TOKEN is EMPTY"
-            exit 1
-          else
-            echo "✅ VERCEL_TOKEN is PRESENT"
-          fi
-
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
@@ -28,3 +20,4 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           working-directory: ./
+          alias-domains: ''
