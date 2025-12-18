@@ -9,7 +9,9 @@ function App() {
        
         <div>
           <h1>Project 1</h1>
+          <p>Xin chào</p>
           <p>Đã deploy thành công trên Vercel</p>
+          <h1>Bài ktr-DH522011880-Ca2</h1>
         </div>
     
       </header>
